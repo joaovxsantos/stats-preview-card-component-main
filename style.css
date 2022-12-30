@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+:root {
+  font-size: 62.5%;
+  --darkblue: hsl(233, 47%, 7%);
+  --darkdesatu: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slitransparent-p: hsla(0, 0%, 100%, 0.75);
+  --slitransparent-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--darkblue);
+}
+
+.main-card {
+  display: flex;
+}
+
+.content-card {
+  background: var(--darkdesatu);
+  width: 42rem;
+  height: 30rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 1rem;
+}
+
+.text-card {
+  padding: 3.2rem;
+  width: 90%;
+}
+
+.text-card h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.text-card a {
+  color: var(--softviolet);
+}
+
+.text-card p {
+  font-size: 1.5rem;
+  color: var(--slitransparent-stats);
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.infos p {
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.infos label {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--slitransparent-stats);
+}
+
+.imagem-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagem-card::after {
+  content: "";
+  position: absolute;
+  background: var(--softviolet);
+  inset: -1rem;
+  width: 44rem;
+  opacity: 0.5;
+}
+
+.imagem-card img {
+  width: 42rem;
+  height: 30rem;
+}
+
+@media (max-width: 800px) {
+  .main-card {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .content-card {
+    width: 24rem;
+    height: 38rem;
+  }
+
+  .imagem-card img {
+    width: 24rem;
+    height: 20rem;
+  }
+  .imagem-card::after {
+    content: "";
+    position: absolute;
+    background: var(--softviolet);
+    inset: -1rem;
+    width: 34rem;
+    opacity: 0.5;
+  }
+
+  .text-card {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .text-card h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .text-card p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .stats-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stats-card p {
+    text-align: center;
+  }
+}
