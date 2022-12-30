@@ -33,7 +33,6 @@ body {
 .content-card {
   background: var(--darkdesatu);
   width: 42rem;
-  height: 30rem;
   border-radius: 0.5rem 0 0 0.5rem;
   padding: 1rem;
 }
@@ -87,14 +86,14 @@ body {
   content: "";
   position: absolute;
   background: var(--softviolet);
-  inset: -1rem;
+  inset: -.5rem;
   width: 44rem;
   opacity: 0.5;
 }
 
 .imagem-card img {
   width: 42rem;
-  height: 30rem;
+ 
 }
 
 @media (max-width: 800px) {
